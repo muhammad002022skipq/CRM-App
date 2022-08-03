@@ -59,7 +59,7 @@ const reducers = {
         state.form.fields = initialState.form.fields;
     },
     setForm: (state, { payload }) => {
-        const customer = state.list.customers.find((a) => (a.id = payload));
+        const customer = state.list.customers.find((a) => (a.id === payload));
 
         if (customer) {
             state.form.fields = customer;
